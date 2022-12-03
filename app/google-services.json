@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "68800042046",
+    "project_id": "matematika-ca527",
+    "storage_bucket": "matematika-ca527.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68800042046:android:648863508df49af007ad6f",
+        "android_client_info": {
+          "package_name": "com.example.matematika"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68800042046-4q0kcr6g351i5pqhhbas2isf3msbdj5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1MB_Yyr4xoEfysoKK4Lyfbm2Bjc2e0s8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68800042046-4q0kcr6g351i5pqhhbas2isf3msbdj5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

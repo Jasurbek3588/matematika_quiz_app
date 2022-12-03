@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Matematika</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="play">Jogar</string>
+    <string name="confirm">Keyingisi</string>
+    <string name="scores">Ochkolar soni:</string>
+    <string name="name"></string>
+    <string name="bu_test_uchun">bu test uchun</string>
+    <string name="nat_alo">Yaxshi natija shug\'ulanishda davom eting</string>
+    <string name="nat_ort">Yonom emas</string>
+    <string name="nat_past">\"juda yomon siz ko\'proq shug\'ullaning \"</string>
+    <string name="lider">Liderlarlar</string>
+    <string name="sozlama">Sozlamalar</string>
+
+    <string name="tilni_tanlash">Tilni tanlash</string>
+    <string name="mavzu" />
+    <string-array name="planets_array">
+        <item>Tilni tanlash</item>
+        <item>O\'zbekcha</item>
+        <item>Ruscha</item>
+        <item>Ingilizcha</item>
+
+    </string-array>
+
+</resources>

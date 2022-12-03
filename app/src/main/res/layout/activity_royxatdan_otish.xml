@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Royxatdan_otish"
+    android:background="@drawable/walpaaper"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3fff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+        <EditText
+            android:id="@+id/edLogin"
+            android:drawablePadding="10dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custombutton"
+            android:drawableLeft="@drawable/email"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:textColorHint="#FFFBF6" />
+
+        <EditText
+            android:id="@+id/edSecName"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custombutton"
+            android:drawableLeft="@drawable/profie"
+            android:drawablePadding="10dp"
+            android:hint="Ism Familya"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:textColorHint="#FFFBF6" />
+
+        <EditText
+            android:drawablePadding="10dp"
+            android:id="@+id/edPassword"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custombutton"
+            android:drawableLeft="@drawable/password"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:textColorHint="#FFFBF6" />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custombutton2"
+            android:onClick="onClickSignUp"
+            android:text="Ro'yxatdan o'tish"
+            android:textAllCaps="false"
+
+            android:textColor="#FFFBF6"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Game">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="114dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cloud" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="182dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/savol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/cloud" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="126dp"
+        android:layout_height="122dp"
+        app:layout_constraintBottom_toTopOf="@+id/savol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cloud3png" />
+
+    <TextView
+        android:id="@+id/savol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#FEE60A"
+        android:textSize="24sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:background="@drawable/radio_group_orange_questions"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savol">
+
+
+        <RadioButton
+            android:id="@+id/VarA"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:buttonTint="#7D5801"
+            android:text=""
+            android:textColor="#7D5801"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/VarB"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:buttonTint="#7D5801"
+            android:text=""
+            android:textColor="#7D5801"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/VarC"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:buttonTint="#7D5801"
+            android:text=""
+            android:textColor="#7D5801"
+
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/VarD"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:buttonTint="#7D5801"
+            android:text=""
+            android:textColor="#7D5801"
+
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="60sp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_orange"
+        android:onClick="loadAnswer"
+        android:text="@string/confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
