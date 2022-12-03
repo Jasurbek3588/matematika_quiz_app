@@ -26,6 +26,7 @@ public class Royxatdan_otish extends AppCompatActivity {
     private String USER_KEY = "User";
     private FirebaseAuth mAuth;
 public String sarvarbek;
+public  int aaa;
   private SharedPreferences mPreferences;
   private SharedPreferences.Editor mEditor;
 
