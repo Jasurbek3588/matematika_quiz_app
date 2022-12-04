@@ -4,19 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings"
+    android:background="#DA673AB7"
+    android:gravity="center"
+    android:onClick="pofiler"
     android:orientation="vertical"
-    >
+    tools:context=".Settings">
 
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_marginBottom="50dp"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/settings"
+        android:orientation="vertical"
+        android:paddingBottom="70dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/settingsbutton"
+            android:drawableLeft="@drawable/ic_baseline_assignment_ind_24"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/profil"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/settingsbutton"
 
 
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/settingsbutton"
+            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/dastur_haqida"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/settingsbutton"
+            android:drawableLeft="@drawable/ic_baseline_share_24"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/dasturni_do_stlarga_ulashish"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

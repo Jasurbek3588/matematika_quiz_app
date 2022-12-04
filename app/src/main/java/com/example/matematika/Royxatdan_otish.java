@@ -27,6 +27,7 @@ public class Royxatdan_otish extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private SharedPreferences mPreferences,mpEmail,mpPass;
     private SharedPreferences.Editor mEditor,meEmail,mePass;
+    private DatabaseReference mDatabase,databaseReference;
 
 
 
@@ -87,14 +88,22 @@ public class Royxatdan_otish extends AppCompatActivity {
         String progressBar=String.valueOf(0);
 
 
-
+     //   mDataBase=FirebaseDatabase.getInstance().getReference("User");
 
         User newUser = new User(id,sec_name,email,score,level,progressBar);
+//        mDatabase.child(String.valueOf(sec_name)).child("score").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<DataSnapshot> task) {
+//                int azz= Integer.parseInt((String.valueOf(task.getResult().getValue())));
+//
+//            }
+//        });
 
 
 
         if (!TextUtils.isEmpty(edSecName.getText().toString())&&!TextUtils.isEmpty(edLogin.getText().toString())&&!TextUtils.isEmpty(edPassword.getText().toString())){
-            mAuth.createUserWithEmailAndPassword(edLogin.getText().toString(),edPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+           mAuth.createUserWithEmailAndPassword(edLogin.getText().toString(),edPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful())

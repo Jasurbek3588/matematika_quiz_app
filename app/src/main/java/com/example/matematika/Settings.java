@@ -76,4 +76,9 @@ public class Settings extends AppCompatActivity {
         config.setLocale(locale);
         resources.updateConfiguration(config,resources.getDisplayMetrics());
     }
+    public void share(View view){
+
+
+        
+    }
 }

@@ -9,6 +9,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -21,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class asosiy<ButtonNavigationView> extends AppCompatActivity {
     RecyclerView mrecyclerView;
@@ -31,12 +34,52 @@ public class asosiy<ButtonNavigationView> extends AppCompatActivity {
     DatabaseReference databaseReference,mDatabaseaa;
     private boolean nik;
     public int maxa;
+    private Timer _timer=new Timer();
+    private TimerTask time;
+    private Double son;
+    private int b;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asosiy);
+
+         b = (int)(Math.random()*(4-1+1)+1);
+
+
+        if (b == 1) {
+            Fragment1 f1=new Fragment1();
+            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frame,f1);
+            ft.commit();
+
+        }
+        if (b==2){
+            Fragment2 f2=new Fragment2();
+            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frame,f2);
+            ft.commit();
+        }
+        if (b==3){
+            Fragment3 f3=new Fragment3();
+            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frame,f3);
+            ft.commit();
+
+        }
+        if (b==4){
+            Fragment4 f4=new Fragment4();
+            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frame,f4);
+            ft.commit();
+
+        }
+
+
+
+
+
         mDatabaseaa = FirebaseDatabase.getInstance().getReference();
 
 
@@ -66,7 +109,39 @@ public class asosiy<ButtonNavigationView> extends AppCompatActivity {
                     case R.id.rank:
                         Intent i=new Intent(asosiy.this,leaderboard.class);
                         startActivity(i);
+                        b = (int)(Math.random()*(4-1+1)+1);
+
+
+                        if (b == 1) {
+                            Fragment1 f1=new Fragment1();
+                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frame,f1);
+                            ft.commit();
+
+                        }
+                        if (b==2){
+                            Fragment2 f2=new Fragment2();
+                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frame,f2);
+                            ft.commit();
+                        }
+                        if (b==3){
+                            Fragment3 f3=new Fragment3();
+                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frame,f3);
+                            ft.commit();
+
+                        }
+                        if (b==4){
+                            Fragment4 f4=new Fragment4();
+                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frame,f4);
+                            ft.commit();
+
+                        }
+
                         return true;
+
 
 
 
@@ -74,6 +149,36 @@ public class asosiy<ButtonNavigationView> extends AppCompatActivity {
                         Intent ii=new Intent(asosiy.this,Settings.class);
                         startActivity(ii);
 
+                        b = (int)(Math.random()*(4-1+1)+1);
+
+
+                        if (b == 1) {
+                            Fragment1 f1=new Fragment1();
+                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frame,f1);
+                            ft.commit();
+
+                        }
+                        if (b==2){
+                            Fragment2 f2=new Fragment2();
+                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frame,f2);
+                            ft.commit();
+                        }
+                        if (b==3){
+                            Fragment3 f3=new Fragment3();
+                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frame,f3);
+                            ft.commit();
+
+                        }
+                        if (b==4){
+                            Fragment4 f4=new Fragment4();
+                            FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frame,f4);
+                            ft.commit();
+
+                        }
 
                         return true;
                 }
@@ -122,6 +227,37 @@ public void kirr(View view){
 }
 public void flclick(View view)
 {
+    b = (int)(Math.random()*(4-1+1)+1);
+
+
+    if (b == 1) {
+        Fragment1 f1=new Fragment1();
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frame,f1);
+        ft.commit();
+
+    }
+    if (b==2){
+        Fragment2 f2=new Fragment2();
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frame,f2);
+        ft.commit();
+    }
+    if (b==3){
+        Fragment3 f3=new Fragment3();
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frame,f3);
+        ft.commit();
+
+    }
+    if (b==4){
+        Fragment4 f4=new Fragment4();
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frame,f4);
+        ft.commit();
+
+    }
+
 
     Intent intent=new Intent(asosiy.this,Game.class);
 

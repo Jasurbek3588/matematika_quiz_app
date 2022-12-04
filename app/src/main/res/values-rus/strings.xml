@@ -23,5 +23,8 @@
         <item>Английский</item>
 
     </string-array>
+    <string name="profil">Профиль</string>
+    <string name="dastur_haqida">О программе</string>
+    <string name="dasturni_do_stlarga_ulashish">Поделитесь программой с друзьями</string>
 
 </resources>

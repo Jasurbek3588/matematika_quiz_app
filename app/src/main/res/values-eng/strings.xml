@@ -25,5 +25,8 @@
         <item>Englich</item>
 
     </string-array>
+    <string name="profil">Profile</string>
+    <string name="dastur_haqida">About the program</string>
+    <string name="dasturni_do_stlarga_ulashish">Share the program with friends</string>
 
 </resources>
