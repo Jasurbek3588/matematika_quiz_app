@@ -37,15 +37,15 @@
             android:textColorHint="#FFFBF6" />
 
         <EditText
-            android:drawablePadding="10dp"
             android:id="@+id/edPassword"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/custombutton"
             android:drawableLeft="@drawable/password"
+            android:drawablePadding="10dp"
             android:hint="Password"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:paddingStart="10dp"
             android:textColorHint="#FFFBF6" />
 

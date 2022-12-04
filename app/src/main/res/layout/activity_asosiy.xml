@@ -44,12 +44,7 @@
             android:src="@drawable/ic_baseline_play_circle_filled_24"
             app:layout_anchor="@id/bottomAppBar" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="flclick"
-            android:src="@drawable/ic_baseline_play_circle_filled_24"
-            app:layout_anchorGravity="center_horizontal" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <TextView

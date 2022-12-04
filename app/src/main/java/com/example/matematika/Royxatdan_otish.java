@@ -25,10 +25,9 @@ public class Royxatdan_otish extends AppCompatActivity {
     private DatabaseReference mDataBase;
     private String USER_KEY = "User";
     private FirebaseAuth mAuth;
-public String sarvarbek;
-public  int aaa;
-  private SharedPreferences mPreferences;
-  private SharedPreferences.Editor mEditor;
+    private SharedPreferences mPreferences,mpEmail,mpPass;
+    private SharedPreferences.Editor mEditor,meEmail,mePass;
+
 
 
 
@@ -39,6 +38,10 @@ public  int aaa;
         init();
         mPreferences= PreferenceManager.getDefaultSharedPreferences(this);
         mEditor=mPreferences.edit();
+//        mpEmail= PreferenceManager.getDefaultSharedPreferences(this);
+//        meEmail=mpEmail.edit();
+//        mpPass= PreferenceManager.getDefaultSharedPreferences(this);
+//        mePass=mpPass.edit();
 
     }
     private void init()
@@ -97,9 +100,14 @@ public  int aaa;
                     if (task.isSuccessful())
 
                     {mDataBase.child(sec_name).setValue(newUser);
+//                        String email=edEmail.getText().toString();
+//                        String pasword=edPassword.getText().toString();
                         String name= sec_name;
                         mEditor.putString(getString(R.string.name),name);
+//                        mEditor.putString(getString(R.string.pass),pasword);
+//                        mEditor.putString(getString(R.string.email),email);
                         mEditor.commit();
+
 
 
 
