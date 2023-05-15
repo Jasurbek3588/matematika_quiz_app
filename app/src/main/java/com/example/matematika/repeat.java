@@ -18,7 +18,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Game extends AppCompatActivity {
+public class repeat extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton optionA;
     RadioButton optionB;
@@ -36,14 +36,12 @@ public class Game extends AppCompatActivity {
     int a;
     int bb;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        Intent intent222=getIntent();
+         bb= Integer.parseInt(intent222.getStringExtra("rep"));
         mDatabase = FirebaseDatabase.getInstance().getReference("Question");
         databaseReference=FirebaseDatabase.getInstance().getReference("User");
         SharedPreferences mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -55,7 +53,7 @@ public class Game extends AppCompatActivity {
             public void onComplete(@NonNull Task<DataSnapshot> task) {
 
                 a = Integer.parseInt((String.valueOf(task.getResult().getValue())));
-                bb=a/10;
+
 
 
             }
@@ -205,7 +203,7 @@ public class Game extends AppCompatActivity {
             screen = new Intent(this, RightActivity.class);
             index=index+1;
             if(index==(max_page+1)){
-                Intent intent=new Intent(Game.this,ShowScoreActivity.class);
+                Intent intent=new Intent(repeat.this,ShowScoreActivity.class);
                 intent.putExtra("score", score);
                 startActivity(intent);
                 finish();
@@ -220,7 +218,7 @@ public class Game extends AppCompatActivity {
             screen = new Intent(this, WrongActivity.class);
             index=index+1;
             if(index==(max_page+1)){
-                Intent intent=new Intent(Game.this,ShowScoreActivity.class);
+                Intent intent=new Intent(repeat.this,ShowScoreActivity.class);
                 intent.putExtra("score", score);
                 startActivity(intent);
                 finish();
@@ -234,6 +232,4 @@ public class Game extends AppCompatActivity {
 
         return screen;
     }
-
-
 }

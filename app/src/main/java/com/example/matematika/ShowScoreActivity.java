@@ -22,13 +22,15 @@ public class ShowScoreActivity extends AppCompatActivity {
     private String USER_KEY = "User";
     private SharedPreferences savedd;
     private SharedPreferences.Editor mEditor1;
-    private String sacc;
+    private String sacc,lev;
+    public int score;
 
     TextView TxtScore;
 
     TextView TxtStatus;
 
     MediaPlayer audio;
+
 
 
     @Override
@@ -53,11 +55,11 @@ public class ShowScoreActivity extends AppCompatActivity {
     }
 
     private String setStatus(String scores){
-        int score = Integer.parseInt(scores);
+        score = Integer.parseInt(scores);
         SharedPreferences mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor mEditor = mPreferences.edit();
         String name= mPreferences.getString(getString(R.string.name),"");
-        mDataBase.child(name).child("score").addValueEventListener(new ValueEventListener() {
+        mDataBase.child(name).child("progressBar").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -94,6 +96,8 @@ public class ShowScoreActivity extends AppCompatActivity {
         audio = MediaPlayer.create(this,  R.raw.low_score);
         return getString(R.string.nat_past);
 
+
+
     }
 
 
@@ -102,7 +106,9 @@ public class ShowScoreActivity extends AppCompatActivity {
         SharedPreferences.Editor mEditor = mPreferences.edit();
         String name= mPreferences.getString(getString(R.string.name),"");
 
-        mDataBase.child(name).child("score").setValue(sacc);
+        if (score==10){
+
+            mDataBase.child(name).child("progressBar").setValue(sacc);}
 //        Intent i=new Intent(ShowScoreActivity.this,Config.class);
 //        startActivity(i);
         Intent intent = getIntent();

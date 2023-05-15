@@ -259,7 +259,7 @@ public void flclick(View view)
     }
 
 
-    Intent intent=new Intent(asosiy.this,Game.class);
+    Intent intent=new Intent(asosiy.this,mavzular.class);
 
 
     startActivity(intent);

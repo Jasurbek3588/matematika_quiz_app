@@ -29,9 +29,6 @@ public class Royxatdan_otish extends AppCompatActivity {
     private SharedPreferences.Editor mEditor,meEmail,mePass;
     private DatabaseReference mDatabase,databaseReference;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,71 +36,27 @@ public class Royxatdan_otish extends AppCompatActivity {
         init();
         mPreferences= PreferenceManager.getDefaultSharedPreferences(this);
         mEditor=mPreferences.edit();
-//        mpEmail= PreferenceManager.getDefaultSharedPreferences(this);
-//        meEmail=mpEmail.edit();
-//        mpPass= PreferenceManager.getDefaultSharedPreferences(this);
-//        mePass=mpPass.edit();
 
     }
-    private void init()
-
-    {
-
-
-        edSecName=findViewById(R.id.edSecName);
+    private void init(){
+       edSecName=findViewById(R.id.edSecName);
         edEmail=findViewById(R.id.edLogin);
         mDataBase= FirebaseDatabase.getInstance().getReference(USER_KEY);
-
-
         edLogin=findViewById(R.id.edLogin);
         edPassword=findViewById(R.id.edPassword);
         mAuth= FirebaseAuth.getInstance();
-//        mDatabase.child(("max")).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                max_page= Integer.parseInt((String.valueOf(task.getResult().getValue())));
-//
-//            }
-//        });
-
-
-
-
-
-
     }
     public void onClickSignUp(View view){
         String id=mDataBase.getKey();
-
-
-
-
-
-
-
         String sec_name= edSecName.getText().toString();
         String email= edEmail.getText().toString();
         String score= String.valueOf(0);
-        String level =String.valueOf(1);
+        String level =String.valueOf(0);
         String progressBar=String.valueOf(0);
-
-
-     //   mDataBase=FirebaseDatabase.getInstance().getReference("User");
-
         User newUser = new User(id,sec_name,email,score,level,progressBar);
-//        mDatabase.child(String.valueOf(sec_name)).child("score").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                int azz= Integer.parseInt((String.valueOf(task.getResult().getValue())));
-//
-//            }
-//        });
-
-
-
         if (!TextUtils.isEmpty(edSecName.getText().toString())&&!TextUtils.isEmpty(edLogin.getText().toString())&&!TextUtils.isEmpty(edPassword.getText().toString())){
 
-           mAuth.createUserWithEmailAndPassword(edLogin.getText().toString(),edPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            mAuth.createUserWithEmailAndPassword(edLogin.getText().toString(),edPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful())
@@ -116,14 +69,6 @@ public class Royxatdan_otish extends AppCompatActivity {
 //                        mEditor.putString(getString(R.string.pass),pasword);
 //                        mEditor.putString(getString(R.string.email),email);
                         mEditor.commit();
-
-
-
-
-
-
-
-
                         Toast.makeText(getApplicationContext(), "Foydalanuvchi Ro'yxatga Olindi", Toast.LENGTH_SHORT).show();
                         Intent i =new Intent(Royxatdan_otish.this,asosiy.class);
                         startActivity(i);
@@ -138,10 +83,6 @@ public class Royxatdan_otish extends AppCompatActivity {
             });
         }else {
             Toast.makeText(getApplicationContext(), "Iltimos Login yoki Parolni to'g'ri kiriting ", Toast.LENGTH_SHORT).show();}
-
-
     }
-
-
 
 }

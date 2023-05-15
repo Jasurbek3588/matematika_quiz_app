@@ -60,9 +60,9 @@ public class Config extends AppCompatActivity {
             Name.setText(user.getSec_name());
             email.setText(user.getEmail());
             score.setText(user.getScore());
-            level.setText((String.valueOf((long) (Double.parseDouble(user.getScore())/(100)))));
-            progressBar.setProgress(Integer.parseInt(String.valueOf((long) (Double.parseDouble(user.getScore())%(100)))));
-            progressBar.setMax(100);
+            level.setText((String.valueOf((long) (Double.parseDouble(user.getProgressBar())/(10)))));
+            progressBar.setProgress(Integer.parseInt(String.valueOf((long) (Double.parseDouble(user.getProgressBar())%(10.001)))));
+            progressBar.setMax(10);
 
 
             this.key = key;
