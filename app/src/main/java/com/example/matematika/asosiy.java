@@ -225,8 +225,7 @@ public void kirr(View view){
 
 
 }
-public void flclick(View view)
-{
+public void flclick(View view){
     b = (int)(Math.random()*(4-1+1)+1);
 
 

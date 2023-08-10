@@ -23,7 +23,7 @@
 
 
 
-        <EditText
+            <EditText
             android:id="@+id/edLogin"
             android:drawablePadding="10dp"
             android:layout_width="250dp"
